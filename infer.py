@@ -1,10 +1,8 @@
 import os
-
-from tqdm import tqdm
-from PIL import Image
-import numpy as np
-
 import warnings
+
+from PIL import Image
+from tqdm import tqdm
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)

@@ -1,7 +1,4 @@
 import os
-import copy
-import cv2
-import numpy as np
 from collections import OrderedDict
 
 import torch

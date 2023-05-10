@@ -1,13 +1,12 @@
 import os
+import pprint
 import sys
 import time
-import yaml
-import cv2
-import pprint
 import traceback
-import numpy as np
-
 import warnings
+
+import numpy as np
+import yaml
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -18,11 +17,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.autograd import Variable
 import torch.distributed as dist
-import torch.multiprocessing as mp
-from torch.cuda.amp import autocast
-from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.tensorboard import SummaryWriter
-from torchvision import models
 
 from data.custom_dataset_data_loader import CustomDatasetDataLoader, sample_data
 
@@ -30,8 +25,8 @@ from data.custom_dataset_data_loader import CustomDatasetDataLoader, sample_data
 from options.base_options import parser
 from utils.tensorboard_utils import board_add_images
 from utils.saving_utils import save_checkpoints
-from utils.saving_utils import load_checkpoint, load_checkpoint_mgpu
-from utils.distributed import get_world_size, set_seed, synchronize, cleanup
+from utils.saving_utils import load_checkpoint
+from utils.distributed import set_seed, synchronize, cleanup
 
 from networks import U2NET
 

@@ -1,12 +1,8 @@
-import os
-from PIL import Image
-import cv2
 import numpy as np
-import random
-
 import torch
 import torch.utils.data as data
 import torchvision.transforms as transforms
+from PIL import Image
 
 
 class BaseDataset(data.Dataset):

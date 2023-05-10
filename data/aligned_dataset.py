@@ -1,19 +1,14 @@
-from data.base_dataset import BaseDataset, Rescale_fixed, Normalize_image
-from data.image_folder import make_dataset, make_dataset_test
-
-import os
-import cv2
-import json
-import itertools
 import collections
-from tqdm import tqdm
+import os
 
-import pandas as pd
 import numpy as np
-from PIL import Image
-
+import pandas as pd
 import torch
 import torchvision.transforms as transforms
+from PIL import Image
+from tqdm import tqdm
+
+from data.base_dataset import BaseDataset, Normalize_image
 
 
 class AlignedDataset(BaseDataset):

@@ -1,5 +1,4 @@
 import os.path as osp
-import os
 
 
 class parser(object):
